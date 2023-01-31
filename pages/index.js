@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import { useState } from 'react';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import { useState } from "react";
 
 export default function Home() {
-  const [input, setInput] = useState("")
+  const [input, setInput] = useState("");
   return (
     <div className={styles.container}>
       <Head>
@@ -13,12 +13,29 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Download <h4>Instagram Videos!</h4>
+          Download <p>Instagram Videos!</p>
         </h1>
 
-        <div style={{backgroundColor: "red", width: "800px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
-          <input style={{ width: "78%", height: "50px"}} placeholder='Please paste the video URL' value={input} onChange={(e) => setInput(e.target.value)} />
-          <button style={{ width: "22%", height: "50px"}} onClick={() => console.log("Submitted")}>Download</button>
+        <div
+          style={{
+            backgroundColor: "red",
+            width: "800px",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}>
+          <input
+            style={{ width: "78%", height: "50px" }}
+            placeholder="Please paste the video URL"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button
+            style={{ width: "22%", height: "50px" }}
+            onClick={() => console.log("Submitted")}>
+            Download
+          </button>
         </div>
       </main>
 
@@ -26,9 +43,8 @@ export default function Home() {
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
+          rel="noopener noreferrer">
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
@@ -84,5 +100,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
