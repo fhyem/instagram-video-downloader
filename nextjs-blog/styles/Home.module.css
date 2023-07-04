@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-.title p {
+.title a {
   color: #0070f3;
   text-decoration: none;
 }
@@ -64,7 +64,7 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #05448c;
+  color: #0070f3;
   border-color: #0070f3;
 }
 
