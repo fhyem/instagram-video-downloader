@@ -9,12 +9,11 @@ const DownloadButton = ({ onClick, disabled }) => (
   </button>
 );
 
-const URLInput = ({ onSubmit }) => {
+const URLInput = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (url) => {
-    setLoading(true);
     setTimeout(() => {
       console.log("sublmit");
       setLoading(false);
