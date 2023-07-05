@@ -32,7 +32,13 @@ export default function Home() {
             onChange={(e) => setInput(e.target.value)}
           />
           <button
-            style={{ width: "22%", height: "50px", backgroundColor: "#0070f3", color: "white", borderColor: "#0070f3" }}
+            style={{
+              width: "22%",
+              height: "50px",
+              backgroundColor: "#0070f3",
+              color: "white",
+              borderColor: "#0070f3",
+            }}
             onClick={() => console.log("Submitted")}>
             Download
           </button>
