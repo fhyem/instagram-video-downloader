@@ -13,7 +13,7 @@ const URLInput = () => {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (url) => {
+  const handleSubmit = async () => {
     setTimeout(() => {
       console.log("sublmit");
       setLoading(false);
