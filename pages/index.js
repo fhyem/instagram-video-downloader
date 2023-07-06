@@ -39,7 +39,7 @@ export default function Home() {
               color: "white",
               borderColor: "#0070f3",
             }}
-            onClick={() => console.log("Submitted")}>
+            >
             Download
           </button>
         </div>
