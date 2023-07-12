@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
+      {/* <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -53,7 +53,7 @@ export default function Home() {
           Powered by{" "}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
-      </footer>
+      </footer> */}
 
       <style jsx>{`
         main {
