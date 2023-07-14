@@ -1,9 +1,55 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useState } from "react";
+import axios from "axios";
+
+const DownloadButton = ({ onClick, disabled }) => (
+  <button
+    style={{
+      width: "22%",
+      height: "50px",
+      backgroundColor: "#0070f3",
+      color: "white",
+      borderColor: "#0070f3",
+    }}
+    onClick={onClick}
+    disabled={disabled}>
+    Download
+  </button>
+);
 
 export default function Home() {
-  const [input, setInput] = useState("");
+  const [url, setUrl] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const encodedParams = new URLSearchParams();
+  encodedParams.set("url", url);
+
+  const options = {
+    method: "POST",
+    url: 'https://instagram-video-or-images-downloader.p.rapidapi.com/',
+    headers: {
+      "Access-Control-Allow-Origin": "http://localhost:3000",
+      "Content-Type": "application/json",
+      "X-RapidAPI-Key": "34098b8d1fmsh2af458679d4a0fbp150b9fjsn1c783bf2b607",
+      "X-RapidAPI-Host": "instagram-video-or-images-downloader.p.rapidapi.com",
+    },
+    data: encodedParams,
+  };
+
+  const fetchVideos = async () => {
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleSubmit = () => {
+    console.log("sublmit");
+    fetchVideos();
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -28,20 +74,10 @@ export default function Home() {
           <input
             style={{ width: "78%", height: "50px" }}
             placeholder="Please paste the video URL"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
           />
-          <button
-            style={{
-              width: "22%",
-              height: "50px",
-              backgroundColor: "#0070f3",
-              color: "white",
-              borderColor: "#0070f3",
-            }}
-            >
-            Download
-          </button>
+          <DownloadButton onClick={handleSubmit} disabled={false} />
         </div>
       </main>
 
