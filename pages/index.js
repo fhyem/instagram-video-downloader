@@ -20,7 +20,6 @@ const DownloadButton = ({ onClick, disabled }) => (
 
 export default function Home() {
   const [url, setUrl] = useState("");
-  const [loading, setLoading] = useState(false);
 
   const encodedParams = new URLSearchParams();
   encodedParams.set("url", url);
