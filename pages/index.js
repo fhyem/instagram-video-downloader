@@ -40,9 +40,7 @@ export default function Home() {
     try {
       const response = await axios.request(options);
     } catch (error) {
-      console.log(response.data);
-      console.log(response.data);
-      console.error(error);
+      console.log("error", error);
     }
   };
 
