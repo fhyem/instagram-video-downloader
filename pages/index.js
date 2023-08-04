@@ -38,7 +38,8 @@ export default function Home() {
 
   const fetchVideos = async () => {
     try {
-      const response = await axios.request(options);
+      // const response = await axios.request(options);
+      // console.log("response", response);
     } catch (error) {
       console.log("error", error);
     }
